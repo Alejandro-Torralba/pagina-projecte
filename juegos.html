@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroGames — Catálogo de Juegos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Barra de usuario logueado -->
+  <div class="user-bar container"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <nav class="container">
+      <span class="nav-logo">RETROGAMES</span>
+
+      <button class="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="juegos.html">Juegos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" id="nav-login-link">Login</a></li>
+        <li><button id="nav-logout">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══ CABECERA DE PÁGINA ═══ -->
+  <section class="hero" style="padding: 50px 0 40px;">
+    <div class="container">
+      <h1 style="font-size: clamp(14px, 3vw, 24px);">// CATÁLOGO DE JUEGOS</h1>
+      <p>Mostrando <span id="juegos-count">0</span> títulos seleccionados de la generación actual</p>
+    </div>
+  </section>
+
+  <!-- ═══ TARJETAS ═══ -->
+  <section>
+    <div class="container">
+      <div class="cards-grid">
+
+        <div class="card">
+          <p class="card-genre">RPG / Souls-like</p>
+          <h3>Elden Ring</h3>
+          <p>La obra maestra de FromSoftware. Un mundo abierto repleto de secretos, jefes devastadores y lore profundo escrito junto a George R.R. Martin.</p>
+          <span class="card-year">2022 · FromSoftware · PC / PS5 / Xbox</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">RPG</p>
+          <h3>Baldur's Gate 3</h3>
+          <p>El RPG por turnos más aclamado de los últimos años. Fiel a D&D 5ª edición, con una narrativa ramificada y libertad total de elección.</p>
+          <span class="card-year">2023 · Larian Studios · PC / PS5</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">Aventura / Mundo abierto</p>
+          <h3>Zelda: Tears of the Kingdom</h3>
+          <p>Hyrule en tres dimensiones: exploración terrestre, submarina y aérea. Las mecánicas Ultrahand y Fusión redefinen la creatividad en los videojuegos.</p>
+          <span class="card-year">2023 · Nintendo · Switch</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">Acción / Metroidvania</p>
+          <h3>Hollow Knight: Silksong</h3>
+          <p>La secuela más esperada del indie. Hornet como protagonista, nuevos reinos y un diseño de niveles que promete superar al original.</p>
+          <span class="card-year">2024 · Team Cherry · PC / Switch</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">Shooter / Battle Royale</p>
+          <h3>Helldivers 2</h3>
+          <p>Cooperativo de acción frenética en tercera persona. Defiende la Súper-Tierra luchando contra insectos gigantes y robots implacables.</p>
+          <span class="card-year">2024 · Arrowhead · PC / PS5</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">Plataformas / Indie</p>
+          <h3>Astro Bot</h3>
+          <p>Una carta de amor a PlayStation. Plataformas 3D brillante, creativo y lleno de referencias que aprovecha al máximo el DualSense.</p>
+          <span class="card-year">2024 · Team Asobi · PS5</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">Survival / Mundo abierto</p>
+          <h3>Palworld</h3>
+          <p>Pokémon meets survival crafting. Captura criaturas, construye bases y sobrevive en un mundo lleno de sorpresas y controversias.</p>
+          <span class="card-year">2024 · Pocketpair · PC / Xbox</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">RPG de acción</p>
+          <h3>Final Fantasy XVI</h3>
+          <p>Un Final Fantasy adulto y oscuro. Combate espectacular con invocaciones colosales y una historia épica sobre esclavitud y libertad.</p>
+          <span class="card-year">2023 · Square Enix · PS5 / PC</span>
+        </div>
+
+        <div class="card">
+          <p class="card-genre">Terror / Survival</p>
+          <h3>Alan Wake 2</h3>
+          <p>Una obra de arte del terror psicológico. Dos protagonistas, dos mundos y una narrativa meta que rompe las barreras del videojuego.</p>
+          <span class="card-year">2023 · Remedy · PC / PS5 / Xbox</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LINKS EXTERNOS ═══ -->
+  <section class="links-externos">
+    <div class="container">
+      <h2 class="section-title">// SABER MÁS</h2>
+      <div class="links-grid">
+        <a href="https://www.ign.com/reviews" target="_blank" rel="noopener" class="link-card">
+          <span>&#9997;</span>
+          <p>Reviews en IGN</p>
+        </a>
+        <a href="https://www.metacritic.com/game" target="_blank" rel="noopener" class="link-card">
+          <span>&#11088;</span>
+          <p>Puntuaciones Metacritic</p>
+        </a>
+        <a href="https://howlongtobeat.com" target="_blank" rel="noopener" class="link-card">
+          <span>&#8987;</span>
+          <p>HowLongToBeat</p>
+        </a>
+        <a href="https://store.steampowered.com" target="_blank" rel="noopener" class="link-card">
+          <span>&#128190;</span>
+          <p>Comprar en Steam</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <h4>RetroGames</h4>
+          <p>Tu portal de videojuegos actuales con estética retro. Hecho con amor y píxeles.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="juegos.html">Juegos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Links externos</h4>
+          <ul>
+            <li><a href="https://www.ign.com" target="_blank" rel="noopener">IGN</a></li>
+            <li><a href="https://www.metacritic.com/game" target="_blank" rel="noopener">Metacritic</a></li>
+            <li><a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a></li>
+            <li><a href="https://howlongtobeat.com" target="_blank" rel="noopener">HowLongToBeat</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 RetroGames &mdash; Proyecto académico &mdash; Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

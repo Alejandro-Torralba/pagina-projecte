@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroGames — Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <nav class="container">
+      <span class="nav-logo">RETROGAMES</span>
+
+      <button class="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="juegos.html">Juegos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" id="nav-login-link">Login</a></li>
+        <li><button id="nav-logout">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══ LOGIN ═══ -->
+  <main>
+    <div class="login-wrapper">
+      <h2>&#9632; ACCESO &#9632;</h2>
+
+      <form id="login-form" novalidate>
+
+        <div class="form-group">
+          <label for="login-user">Usuario</label>
+          <input
+            type="text"
+            id="login-user"
+            name="usuario"
+            placeholder="Introduce tu usuario"
+            autocomplete="username"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="login-pass">Contraseña</label>
+          <input
+            type="password"
+            id="login-pass"
+            name="password"
+            placeholder="Introduce tu contraseña"
+            autocomplete="current-password"
+            required
+          />
+        </div>
+
+        <p id="login-error" class="form-error"></p>
+
+        <button type="submit" class="btn btn-purple" style="width:100%; margin-top:10px;">
+          INICIAR SESIÓN
+        </button>
+
+      </form>
+
+      <p class="login-hint">
+        Usuario demo: <strong>gamer</strong><br />
+        Contraseña demo: <strong>1234</strong>
+      </p>
+    </div>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <h4>RetroGames</h4>
+          <p>Tu portal de videojuegos actuales con estética retro. Hecho con amor y píxeles.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="juegos.html">Juegos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Links externos</h4>
+          <ul>
+            <li><a href="https://www.ign.com" target="_blank" rel="noopener">IGN</a></li>
+            <li><a href="https://www.metacritic.com/game" target="_blank" rel="noopener">Metacritic</a></li>
+            <li><a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a></li>
+            <li><a href="https://www.3djuegos.com" target="_blank" rel="noopener">3DJuegos</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 RetroGames &mdash; Proyecto académico &mdash; Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

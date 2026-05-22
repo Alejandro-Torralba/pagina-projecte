@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroGames — Contacto</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Barra de usuario logueado -->
+  <div class="user-bar container"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <nav class="container">
+      <span class="nav-logo">RETROGAMES</span>
+
+      <button class="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="juegos.html">Juegos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" id="nav-login-link">Login</a></li>
+        <li><button id="nav-logout">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══ CABECERA ═══ -->
+  <section class="hero" style="padding: 50px 0 40px;">
+    <div class="container">
+      <h1 style="font-size: clamp(14px, 3vw, 22px);">// CONTACTO</h1>
+      <p>¿Tienes sugerencias, quieres colaborar o simplemente quieres hablar de videojuegos? ¡Escríbenos!</p>
+    </div>
+  </section>
+
+  <!-- ═══ FORMULARIO ═══ -->
+  <section>
+    <div class="container">
+      <div class="form-wrapper">
+
+        <form id="contacto-form" novalidate>
+
+          <div class="form-group">
+            <label for="c-nombre">Nombre</label>
+            <input
+              type="text"
+              id="c-nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+            <p class="form-error" id="err-nombre"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="c-email">Email</label>
+            <input
+              type="email"
+              id="c-email"
+              name="email"
+              placeholder="tu@email.com"
+              required
+            />
+            <p class="form-error" id="err-email"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="c-asunto">Asunto</label>
+            <select id="c-asunto" name="asunto">
+              <option value="">-- Selecciona un asunto --</option>
+              <option value="sugerencia">Sugerencia de juego</option>
+              <option value="colaboracion">Colaboración</option>
+              <option value="error">Reportar un error</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-mensaje">Mensaje</label>
+            <textarea
+              id="c-mensaje"
+              name="mensaje"
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+            <p class="form-error" id="err-mensaje"></p>
+          </div>
+
+          <button type="submit" class="btn" style="width:100%;">
+            ENVIAR MENSAJE
+          </button>
+
+        </form>
+
+        <p class="form-success" id="form-exito"></p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <h4>RetroGames</h4>
+          <p>Tu portal de videojuegos actuales con estética retro. Hecho con amor y píxeles.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="juegos.html">Juegos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Links externos</h4>
+          <ul>
+            <li><a href="https://www.ign.com" target="_blank" rel="noopener">IGN</a></li>
+            <li><a href="https://www.metacritic.com/game" target="_blank" rel="noopener">Metacritic</a></li>
+            <li><a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a></li>
+            <li><a href="https://www.3djuegos.com" target="_blank" rel="noopener">3DJuegos</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 RetroGames &mdash; Proyecto académico &mdash; Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
