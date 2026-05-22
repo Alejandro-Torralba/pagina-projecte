@@ -1,24 +1,24 @@
-/* =============================================
+/*
    RETROGAMES — main.js
    Toda la lógica JavaScript de la web.
    Se ejecuta cuando el HTML ha cargado del todo.
-============================================= */
+ */
 
-/* --------------------------------------------------
+/*
    CREDENCIALES DE LOGIN
    Usuario y contraseña definidos aquí directamente
    en el código (hardcodeados). No hay base de datos.
--------------------------------------------------- */
+ */
 let USUARIO_VALIDO  = 'gamer';
 let PASSWORD_VALIDA = '1234';
 
 
-/* ==================================================
+/*
    1. MENÚ HAMBURGUESA
    En pantallas pequeñas, el menú se oculta y aparece
    un botón (☰). Al pulsarlo, el menú se muestra o
    se esconde añadiendo/quitando la clase "open".
-================================================== */
+ */
 function initMenu() {
   let hamburger = document.querySelector('.hamburger'); // botón de las tres rayas
   let navLinks  = document.querySelector('.nav-links'); // la lista de enlaces del nav
@@ -41,12 +41,12 @@ function initMenu() {
 }
 
 
-/* ==================================================
+/*
    2. MARCAR ENLACE ACTIVO EN EL NAV
    Compara el nombre del fichero actual (ej: juegos.html)
    con el href de cada enlace del nav, y añade la clase
    "active" al que coincida para resaltarlo visualmente.
-================================================== */
+ */
 function marcarActivo() {
   // Obtenemos el nombre del fichero de la URL actual
   // pathname.split('/').pop() devuelve la última parte de la ruta, ej: "juegos.html"
@@ -60,26 +60,26 @@ function marcarActivo() {
 }
 
 
-/* ==================================================
+/*
    3. COMPROBAR SI EL USUARIO ESTÁ LOGUEADO
    Miramos en localStorage si hay guardada la clave
    'rg_logueado' con el valor 'si'.
    localStorage es un almacén del navegador que persiste
    aunque cerremos la pestaña.
-================================================== */
+ */
 function estaLogueado() {
   return localStorage.getItem('rg_logueado') === 'si';
 }
 
 
-/* ==================================================
+/*
    4. ACTUALIZAR EL NAV SEGÚN ESTADO DE LOGIN
    Si el usuario está logueado:
      - Muestra el botón "Logout"
      - Oculta el enlace "Login"
      - Muestra la barra con el nombre del usuario
    Si NO está logueado, hace lo contrario.
-================================================== */
+ */
 function actualizarNav() {
   let logoutBtn = document.getElementById('nav-logout');
   let loginLink = document.getElementById('nav-login-link');
@@ -105,13 +105,13 @@ function actualizarNav() {
 }
 
 
-/* ==================================================
+/*
    5. LÓGICA DEL FORMULARIO DE LOGIN
    Escucha el envío del formulario. Compara lo que
    escribió el usuario con las credenciales hardcodeadas.
    - Si coinciden: guarda en localStorage y redirige
    - Si no coinciden: muestra mensaje de error
-================================================== */
+ */
 function initLogin() {
   let form = document.getElementById('login-form');
   if (!form) return; // si no hay formulario de login en esta página, salimos
@@ -146,11 +146,11 @@ function initLogin() {
 }
 
 
-/* ==================================================
+/*
    6. LÓGICA DEL BOTÓN LOGOUT
    Al hacer clic en "Logout", borramos los datos de
    localStorage y recargamos el nav.
-================================================== */
+ */
 function initLogout() {
   let logoutBtn = document.getElementById('nav-logout');
   if (!logoutBtn) return;
@@ -164,12 +164,12 @@ function initLogout() {
 }
 
 
-/* ==================================================
+/*
    7. VALIDACIÓN DEL FORMULARIO DE CONTACTO
    Comprueba campo a campo que los datos son correctos
    antes de mostrar el mensaje de éxito.
    No envía nada a ningún servidor.
-================================================== */
+ */
 function initContacto() {
   let form = document.getElementById('contacto-form');
   if (!form) return; // si no hay formulario de contacto en esta página, salimos
@@ -230,30 +230,12 @@ function initContacto() {
   });
 }
 
-
-/* ==================================================
-   8. EFECTO CURSOR PARPADEANTE
-   Alterna la visibilidad de un elemento cada 500ms
-   para simular el cursor típico de los juegos retro.
-================================================== */
-function initParpadeo() {
-  let cursor = document.getElementById('cursor-parpadeo');
-  if (!cursor) return;
-
-  // setInterval ejecuta la función cada X milisegundos indefinidamente
-  setInterval(function () {
-    cursor.style.visibility =
-      cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
-  }, 500);
-}
-
-
-/* ==================================================
+/*
    9. CONTADOR ANIMADO DE JUEGOS
    Lee cuántas tarjetas (.card) hay en la página
    y cuenta desde 0 hasta ese número, actualizando
    el elemento #juegos-count en cada paso.
-================================================== */
+ */
 function initContador() {
   let el = document.getElementById('juegos-count');
   if (!el) return;
@@ -270,11 +252,11 @@ function initContador() {
 }
 
 
-/* ==================================================
+/*
    ARRANQUE: se ejecuta cuando el DOM está listo
    DOMContentLoaded se dispara cuando el navegador
    ha leído todo el HTML (sin esperar imágenes, etc.)
-================================================== */
+ */
 document.addEventListener('DOMContentLoaded', function () {
   initMenu();       // activa el menú hamburguesa
   marcarActivo();   // resalta el enlace de la página actual
@@ -282,6 +264,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initLogin();      // activa el formulario de login (si existe)
   initLogout();     // activa el botón de logout (si existe)
   initContacto();   // activa el formulario de contacto (si existe)
-  initParpadeo();   // activa el cursor parpadeante (si existe)
   initContador();   // activa el contador de juegos (si existe)
 });
