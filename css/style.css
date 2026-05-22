@@ -1,7 +1,7 @@
-/* =============================================
+/*
    RETROGAMES — Estilos globales
    Fuente: Press Start 2P (Google Fonts)
-============================================= */
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -86,7 +86,7 @@ section {
   padding: 50px 0;
 }
 
-/* ── HEADER ── */
+/*  HEADER  */
 header {
   background: var(--bg2);
   border-bottom: 2px solid var(--verde);
@@ -155,7 +155,7 @@ nav {
   background: var(--verde);
 }
 
-/* ── HERO ── */
+/*  HERO  */
 .hero {
   text-align: center;
   padding: 70px 0 50px;
@@ -184,7 +184,7 @@ nav {
   flex-wrap: wrap;
 }
 
-/* ── TARJETAS ── */
+/*  TARJETAS  */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -225,7 +225,7 @@ nav {
   color: #777;
 }
 
-/* ── LINKS EXTERNOS ── */
+/*  LINKS EXTERNOS  */
 .links-externos {
   background: var(--bg2);
   border-top: 1px solid var(--gris);
@@ -257,7 +257,7 @@ nav {
   text-transform: uppercase;
 }
 
-/* ── FORMULARIO ── */
+/*  FORMULARIO  */
 .form-wrapper {
   max-width: 580px;
   margin: 0 auto;
@@ -324,7 +324,7 @@ nav {
   margin-top: 14px;
 }
 
-/* ── LOGIN ── */
+/*  LOGIN  */
 .login-wrapper {
   max-width: 420px;
   margin: 60px auto;
@@ -347,7 +347,7 @@ nav {
   line-height: 2;
 }
 
-/* ── BARRA DE USUARIO LOGUEADO ── */
+/*  BARRA DE USUARIO LOGUEADO  */
 .user-bar {
   display: none;
   background: var(--bg2);
@@ -358,7 +358,7 @@ nav {
   text-align: right;
 }
 
-/* ── FOOTER ── */
+/*  FOOTER  */
 footer {
   background: var(--bg2);
   border-top: 2px solid var(--verde);
@@ -404,7 +404,7 @@ footer {
   color: var(--gris);
 }
 
-/* ── RESPONSIVE ── */
+/*  RESPONSIVE  */
 @media (max-width: 768px) {
   .hamburger { display: flex; }
 
